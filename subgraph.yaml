@@ -1,0 +1,23 @@
+specVersion: 0.0.1
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Contract
+    network: rinkeby
+    source:
+      address: "0xD9F875600610dAC4ca898DFa67438B90Cad3Ebc2"
+      abi: Contract
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - newData
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: newData(string,string,string,string,string,string,uint256,address)
+          handler: handlenewData
+      file: ./src/contract.ts
