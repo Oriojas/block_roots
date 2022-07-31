@@ -1,0 +1,148 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "origin",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "businessName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "product",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "batch",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "packing",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "wallet",
+        "type": "address"
+      }
+    ],
+    "name": "newData",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "data",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "origin",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "businessName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "product",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "batch",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "packing",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "wallet",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_name",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_origin",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_businessName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_product",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_batch",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_packing",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "pushData",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

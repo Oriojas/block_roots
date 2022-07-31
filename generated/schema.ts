@@ -11,7 +11,7 @@ import {
   BigDecimal
 } from "@graphprotocol/graph-ts";
 
-export class ExampleEntity extends Entity {
+export class pushData extends Entity {
   constructor(id: string) {
     super();
     this.set("id", Value.fromString(id));
@@ -19,18 +19,18 @@ export class ExampleEntity extends Entity {
 
   save(): void {
     let id = this.get("id");
-    assert(id != null, "Cannot save ExampleEntity entity without an ID");
+    assert(id != null, "Cannot save pushData entity without an ID");
     if (id) {
       assert(
         id.kind == ValueKind.STRING,
-        `Entities of type ExampleEntity must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
+        `Entities of type pushData must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
       );
-      store.set("ExampleEntity", id.toString(), this);
+      store.set("pushData", id.toString(), this);
     }
   }
 
-  static load(id: string): ExampleEntity | null {
-    return changetype<ExampleEntity | null>(store.get("ExampleEntity", id));
+  static load(id: string): pushData | null {
+    return changetype<pushData | null>(store.get("pushData", id));
   }
 
   get id(): string {
@@ -51,6 +51,15 @@ export class ExampleEntity extends Entity {
     this.set("count", Value.fromBigInt(value));
   }
 
+  get amount(): BigInt {
+    let value = this.get("amount");
+    return value!.toBigInt();
+  }
+
+  set amount(value: BigInt) {
+    this.set("amount", Value.fromBigInt(value));
+  }
+
   get name(): string {
     let value = this.get("name");
     return value!.toString();
@@ -67,5 +76,41 @@ export class ExampleEntity extends Entity {
 
   set origin(value: string) {
     this.set("origin", Value.fromString(value));
+  }
+
+  get businessName(): string {
+    let value = this.get("businessName");
+    return value!.toString();
+  }
+
+  set businessName(value: string) {
+    this.set("businessName", Value.fromString(value));
+  }
+
+  get product(): string {
+    let value = this.get("product");
+    return value!.toString();
+  }
+
+  set product(value: string) {
+    this.set("product", Value.fromString(value));
+  }
+
+  get batch(): string {
+    let value = this.get("batch");
+    return value!.toString();
+  }
+
+  set batch(value: string) {
+    this.set("batch", Value.fromString(value));
+  }
+
+  get packing(): string {
+    let value = this.get("packing");
+    return value!.toString();
+  }
+
+  set packing(value: string) {
+    this.set("packing", Value.fromString(value));
   }
 }
